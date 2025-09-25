@@ -14,10 +14,13 @@ cd ..
 rm -rf yay
 
 # Instalar pacotes essenciais do Hyprland e ferramentas
-sudo pacman -S --noconfirm hyprland hyprlock hypridle hyprcursor hyprpaper hyprpicker waybar kitty rofi-wayland dolphin dolphin-plugins ark kio-admin polkit-kde-agent qt5-wayland qt6-wayland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk dunst cliphist mpv pavucontrol xdg-user-dirs-gtk ttf-font-awesome ttf-jetbrains-mono-nerd ttf-open-sans noto-fonts ttf-droid ttf-roboto
+sudo pacman -S --noconfirm hyprland hyprlock hypridle hyprcursor hyprpaper hyprpicker waybar kitty rofi-wayland dolphin dolphin-plugins ark kio-admin polkit-kde-agent qt5-wayland qt6-wayland archlinux-xdg-menu xdg-desktop-portal-hyprland xdg-desktop-portal-gtk dunst cliphist mpv pavucontrol xdg-user-dirs-gtk kde-cli-tools ttf-font-awesome ttf-jetbrains-mono-nerd noto-fonts ttf-droid ttf-roboto
+
+# Minhas ferramentas
+sudo pacman -S --noconfirm less fastfetch gnome-keyring breeze breeze5 breeze-gtk papirus-icon-theme nwg-look
 
 # Instalar pacotes do AUR (com yay)
-yay -S --noconfirm hypershot wlogout vim visual-studio-code-bin brave-bin
+yay -S --noconfirm hypershot wlogout vim visual-studio-code-bin brave-bin qt5ct-kde qt6ct-kde
 
 # Habilitar serviços do pipewire
 systemctl --user enable pipewire pipewire-pulse wireplumber
