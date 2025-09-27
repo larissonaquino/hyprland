@@ -1,8 +1,8 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 29, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -14,7 +14,9 @@
     ],
     "modules-right": [
         "pulseaudio",
-        "tray"
+        "tray",
+        "network"
+        // "custom/power"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -34,7 +36,9 @@
     //     }
     // },
     "hyprland/workspaces": {
-     "format": "{icon}"
+        "disable-scroll": false,
+        "all-outputs": true,
+        "format": "{name}"
     },
     "keyboard-state": {
         "numlock": true,
@@ -90,16 +94,17 @@
     },
     "tray": {
         // "icon-size": 21,
-        "spacing": 10,
-        // "icons": {
-        "blueman": "bluetooth"
+        "spacing": 5,
+        "icons": {
+            "blueman": "bluetooth"
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
+        }
     },
     "clock": {
-        "timezone": "America/Fortaleza",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%H:%M}",
+        "format-alt": "{:%A, %d %B %Y}",
+        "tooltip-format": "<big>{:%d/%m/%Y}</big>",
+        "on-click": "yad --calendar --undecorated --close-on-unfocus --no-buttons --geometry=200x200-20+40"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -153,7 +158,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
@@ -161,7 +166,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {format_source}",
+        "format": "{icon}",
         "format-bluetooth": "{icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -191,7 +196,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : " ⏻ ",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder

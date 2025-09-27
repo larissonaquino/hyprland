@@ -24,11 +24,11 @@ fi
 
 # Install Hyprland and essential packages
 echo ":: Installing Hyprland and essential packages..."
-sudo pacman -S --noconfirm hyprland hyprlock hypridle hyprcursor hyprpaper hyprpicker waybar kitty rofi-wayland dolphin dolphin-plugins ark kio-admin polkit-kde-agent qt5-wayland qt6-wayland archlinux-xdg-menu xdg-desktop-portal-hyprland xdg-desktop-portal-gtk dunst cliphist mpv pavucontrol xdg-user-dirs-gtk kde-cli-tools ttf-font-awesome ttf-jetbrains-mono-nerd noto-fonts ttf-droid ttf-roboto
+sudo pacman -S --noconfirm hyprland hyprlock hypridle hyprcursor hyprpaper hyprpicker waybar kitty rofi-wayland dolphin dolphin-plugins ark kio-admin polkit-kde-agent qt5-wayland qt6-wayland archlinux-xdg-menu xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland dunst cliphist mpv pavucontrol xdg-user-dirs-gtk kde-cli-tools ttf-font-awesome ttf-jetbrains-mono-nerd noto-fonts ttf-droid ttf-roboto
 
 # My tools
 echo ":: Installing additional tools..."
-sudo pacman -S --noconfirm less fastfetch gnome-keyring breeze breeze5 breeze-gtk papirus-icon-theme nwg-look
+sudo pacman -S --noconfirm less fastfetch gnome-keyring breeze breeze5 breeze-gtk papirus-icon-theme nwg-look btop yad dotnet-sdk nodejs npm docker docker-compose
 
 # Copy repository files for Hyprland configuration
 echo ":: Setting up configuration files..."
@@ -60,7 +60,7 @@ sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils # NVIDIA
 #sudo pacman -S mesa vulkan-radeon lib32-mesa lib32-vulkan-radeon # AMD (Radeon)
 
 # Instalar pacotes do AUR (com yay)
-yay -S --noconfirm hypershot wlogout vim visual-studio-code-bin brave-bin qt5ct-kde qt6ct-kde
+yay -S --noconfirm hypershot wlogout vim visual-studio-code-bin brave-bin qt5ct-kde qt6ct-kde spotify
 
 # Habilitar serviços do pipewire
 systemctl --user enable pipewire pipewire-pulse wireplumber
