@@ -25,7 +25,7 @@ sudo pacman -S --noconfirm hyprland hyprlock hypridle hyprcursor hyprpaper hyprp
 
 # My tools
 echo ":: Installing additional tools..."
-sudo pacman -S --noconfirm less fastfetch gnome-keyring breeze breeze5 breeze-gtk papirus-icon-theme nwg-look btop yad dotnet-sdk nodejs npm docker docker-compose tree qalculate-gtk zsh
+sudo pacman -S --noconfirm less fastfetch gnome-keyring breeze breeze5 breeze-gtk papirus-icon-theme nwg-look btop yad dotnet-sdk nodejs npm docker docker-compose tree qalculate-gtk zsh whois
 
 echo ":: Setting zsh as the default shell..."
 chsh -s /usr/bin/zsh
