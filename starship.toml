@@ -1,0 +1,50 @@
+add_newline = true
+format = """
+$username$hostname$directory$git_branch$git_status$nodejs$dotnet$python$docker$time
+$character"""
+
+[username]
+style_user = "bold green"
+style_root = "bold red"
+format = "[$user]($style) "
+show_always = false
+
+[hostname]
+ssh_only = true
+format = "on [$hostname](bold yellow) "
+disabled = false
+
+[directory]
+style = "blue"
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+symbol = "🌱 "
+style = "bold purple"
+
+[git_status]
+style = "red"
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[nodejs]
+symbol = "⬢ "
+format = "[$symbol $version](bold green) "
+
+[dotnet]
+symbol = "•NET "
+format = "[$symbol $version](blue bold) "
+
+[python]
+symbol = "🐍 "
+format = "[$symbol $version](yellow bold) "
+
+[docker]
+symbol = "🐳 "
+format = "[$symbol $context](blue bold) "
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "🕒 [$time](bold cyan) "
+
