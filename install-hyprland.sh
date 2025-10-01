@@ -21,14 +21,11 @@ else
 fi
 
 echo ":: Installing Hyprland and essential packages..."
-sudo pacman -S --noconfirm hyprland hyprlock hypridle hyprcursor hyprpaper hyprpicker waybar kitty rofi-wayland dolphin dolphin-plugins ark kio-admin polkit-kde-agent qt5-wayland qt6-wayland archlinux-xdg-menu xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xorg-xwayland dunst cliphist mpv pavucontrol xdg-user-dirs-gtk kde-cli-tools ttf-font-awesome ttf-jetbrains-mono-nerd noto-fonts ttf-droid ttf-roboto
+sudo pacman -S --noconfirm hyprland hyprlock hypridle hyprcursor hyprpaper hyprpicker waybar kitty rofi-wayland dolphin dolphin-plugins ark kio-admin polkit-kde-agent qt5-wayland qt6-wayland archlinux-xdg-menu xdg-desktop-portal-gtk xorg-xwayland dunst cliphist mpv pavucontrol xdg-user-dirs-gtk kde-cli-tools ttf-font-awesome ttf-jetbrains-mono-nerd noto-fonts ttf-droid ttf-roboto
 
 # My tools
 echo ":: Installing additional tools..."
-sudo pacman -S --noconfirm less fastfetch gnome-keyring breeze breeze5 breeze-gtk papirus-icon-theme nwg-look btop yad dotnet-sdk nodejs npm docker docker-compose tree qalculate-gtk zsh whois
-
-echo ":: Setting zsh as the default shell..."
-chsh -s /usr/bin/zsh
+sudo pacman -S --noconfirm less fastfetch gnome-keyring breeze breeze5 breeze-gtk papirus-icon-theme nwg-look btop yad dotnet-sdk nodejs npm docker docker-compose tree qalculate-gtk zsh whois playerctl lxappearance kvantum grim slurp
 
 echo ":: Adding user to docker group..."
 sudo usermod -aG docker $USER
@@ -73,11 +70,14 @@ sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils # NVIDIA
 #sudo pacman -S mesa vulkan-radeon lib32-mesa lib32-vulkan-radeon # AMD (Radeon)
 
 # Install AUR packages (with yay)
-yay -S --noconfirm hypershot wlogout vim visual-studio-code-bin brave-bin qt5ct-kde qt6ct-kde spotify oh-my-zsh-git zsh-autosuggestions zsh-syntax-highlighting starship
+yay -S --noconfirm hypershot wlogout vim visual-studio-code-bin brave-bin qt5ct-kde qt6ct-kde spotify spotify-tray oh-my-zsh-git zsh-autosuggestions zsh-syntax-highlighting starship
 
 echo ":: Enabling Pipewire and Docker services..."
 systemctl --user enable pipewire pipewire-pulse wireplumber
 sudo systemctl enable docker
+
+echo ":: Setting zsh as the default shell..."
+chsh -s /usr/bin/zsh
 
 echo "----------------------------------------------------"
 echo "Installation completed! Reset to start Hyprland."
