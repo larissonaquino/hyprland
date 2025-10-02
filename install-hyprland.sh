@@ -40,21 +40,23 @@ sudo cp ./config/kitty/kitty.conf "$HOME/.config/kitty/"
 sudo cp ./config/waybar/config.jsonc "$HOME/.config/waybar/"
 sudo cp ./config/waybar/style.css "$HOME/.config/waybar/"
 sudo cp ./config/waybar/scripts/launch.sh "$HOME/.config/waybar/scripts/"
+sudo cp ./config/waybar/scripts/power-menu.sh "$HOME/.config/waybar/scripts/"
 
-# Make launch script executable, it's useful to restart waybar
+# Make scripts executable
 chmod +x "$HOME/.config/waybar/scripts/launch.sh"
+chmod +x "$HOME/.config/waybar/scripts/power-menu.sh"
 
 echo ":: Configuration files setup completed."
-
-# Update system after updating configurations files
-echo ":: Updating system after updating configurations files..."
-sudo pacman -Syu --noconfirm
 
 # GPU Drivers
 echo ":: Installing GPU drivers..."
 sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils # NVIDIA
 #sudo pacman -S mesa vulkan-intel lib32-mesa lib32-vulkan-intel # Intel (integrated)
 #sudo pacman -S mesa vulkan-radeon lib32-mesa lib32-vulkan-radeon # AMD (Radeon)
+
+# Update system after updating GPU drivers
+echo ":: Updating system after updating GPU drivers..."
+sudo pacman -Syu --noconfirm
 
 # Clone and install a AUR Helper (yay)
 if ! command -v yay &> /dev/null

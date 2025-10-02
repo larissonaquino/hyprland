@@ -1,6 +1,6 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: 'JetBrainsMonoNerd Font monospace', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'JetBrainsMonoNerd Font', Roboto, Helvetica, Arial, sans-serif;
   font-size: .9rem;
 }
 
@@ -70,8 +70,9 @@ button:hover {
 #pulseaudio,
 #custom-media,
 #tray,
-#mpris {
-  padding: 0 .4rem;
+#mpris,
+#custom-power {
+  padding: .0rem .4rem;
   color: #ffffff;
   font-weight: bold;
   border-radius: .5rem;
@@ -131,9 +132,9 @@ label:focus {
 
 #custom-power {
   font-weight: bold;
-  font-size: 1.125rem;
+  font-size: 0.825rem;
   color: #cdd6f4;
-  background-color: #89b4fa;
+  margin-right: .313rem;
 }
 
 #custom-power:hover {
