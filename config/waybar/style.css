@@ -69,7 +69,8 @@ button:hover {
 #wireplumber,
 #pulseaudio,
 #custom-media,
-#tray {
+#tray,
+#mpris {
   padding: 0 .4rem;
   color: #ffffff;
   font-weight: bold;

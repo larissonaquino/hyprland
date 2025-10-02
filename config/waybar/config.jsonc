@@ -13,6 +13,9 @@
         "clock"
     ],
     "modules-right": [
+        "custom/prev",
+        "mpris",
+        "custom/next",
         "pulseaudio",
         "tray",
         "network"
@@ -76,9 +79,8 @@
         }
     },
     "clock": {
-        "format": "{:%H:%M}",
-        "format-alt": "{:%A, %d %B %Y}",
-        "tooltip-format": "<big>{:%d/%m/%Y}</big>",
+        "format": "{:%H:%M, %A, %d de %B}",
+        "tooltip-format": "{:%A, %d de %B de %Y}",
         "on-click": "yad --calendar --undecorated --close-on-unfocus --no-buttons --geometry=200x200-20+40"
     },
     "cpu": {
@@ -159,6 +161,31 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "mpris": {
+        "format": "⏸",
+        "format-paused": "▶", // Ícone de pausa (requer uma Nerd Font)
+        "player-icons": {
+            "default": "🎵"
+        },
+        "status-icons": {
+            "playing": "▶",
+            "paused": "⏸"
+        },
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+    "custom/prev": {
+        "format": "", // Ícone de "anterior" (requer Nerd Fonts)
+        "on-click": "playerctl previous",
+        "tooltip-text": "Faixa Anterior"
+    },
+
+    "custom/next": {
+        "format": "", // Ícone de "próximo" (requer Nerd Fonts)
+        "on-click": "playerctl next",
+        "tooltip-text": "Próxima Faixa"
     },
     "custom/media": {
         "format": "{icon} {text}",
