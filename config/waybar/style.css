@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-  background: rgba(30, 30, 46, 0.6);
+  background: transparent;
   color: #cdd6f4;
   font-size: .875rem;
 }
@@ -38,7 +38,7 @@ button:hover {
 
 #workspaces button {
   padding: .3rem;
-  margin-right: .6rem;
+  margin-left: .6rem;
   border-radius: .25rem;
   background: #313244;
   color: #cdd6f4;
@@ -64,13 +64,10 @@ button:hover {
 }
 
 #clock,
-#battery,
+#mpris,
 #network,
-#wireplumber,
-#pulseaudio,
 #custom-media,
 #tray,
-#mpris,
 #custom-power {
   padding: .0rem .4rem;
   color: #ffffff;
@@ -119,6 +116,7 @@ label:focus {
 #pulseaudio {
   font-weight: bold;
   color: #cdd6f4;
+  margin: .300rem;
 }
 
 #pulseaudio:hover {
@@ -133,7 +131,7 @@ label:focus {
 #custom-power {
   font-weight: bold;
   font-size: 0.825rem;
-  color: #cdd6f4;
+  color: #8b3333;
   margin-right: .313rem;
 }
 
