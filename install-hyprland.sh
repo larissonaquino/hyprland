@@ -16,7 +16,7 @@ sudo pacman -S --noconfirm hyprland hyprlock hypridle hyprcursor hyprpaper hyprp
 
 # My tools
 echo ":: Installing additional tools..."
-sudo pacman -S --noconfirm less fastfetch gnome-keyring breeze breeze5 breeze-gtk papirus-icon-theme nwg-look btop yad dotnet-sdk nodejs npm docker docker-compose tree qalculate-gtk zsh whois playerctl lxappearance kvantum grim slurp steam
+sudo pacman -S --noconfirm less fastfetch gnome-keyring breeze breeze5 breeze-gtk papirus-icon-theme nwg-look btop yad dotnet-sdk nodejs npm docker docker-compose tree qalculate-gtk zsh whois playerctl lxappearance kvantum grim slurp steam libreoffice-fresh gimp
 
 echo ":: Adding user to docker group..."
 sudo usermod -aG docker $USER

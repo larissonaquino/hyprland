@@ -60,7 +60,8 @@
         },
         "actions": {
             "on-click-right": "mode"
-        }
+        },
+        "on-click": "yad --calendar --undecorated --close-on-unfocus --no-buttons --geometry=200x200-20+40"
     },
     "network": {
         "interface": "enp4s0",
