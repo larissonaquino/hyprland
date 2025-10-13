@@ -35,6 +35,7 @@ echo ":: Copy configuration files from user $USER..."
 sudo cp ./starship.toml "$HOME/"
 sudo cp ./.vimrc "$HOME/"
 sudo cp ./.zshrc "$HOME/"
+sudo cp ./config/electron-flags.conf "$HOME/.config/"
 sudo cp ./config/kdeglobals "$HOME/.config/"
 sudo cp ./config/dunst/dunstrc "$HOME/.config/dunst/"
 sudo cp ./config/rofi/config.rasi "$HOME/.config/rofi/"
@@ -76,7 +77,7 @@ else
 fi
 
 # My yay tools
-yay -S --noconfirm hypershot wlogout vim visual-studio-code-bin brave-bin qt5ct-kde qt6ct-kde spotify spotify-tray oh-my-zsh-git zsh-autosuggestions zsh-syntax-highlighting starship
+yay -S --noconfirm hypershot wlogout vim visual-studio-code-bin brave-bin qt5ct-kde qt6ct-kde spotify spotify-tray oh-my-zsh-git zsh-autosuggestions zsh-syntax-highlighting starship discord
 
 echo ":: Enabling Pipewire and Docker services..."
 systemctl --user enable pipewire pipewire-pulse wireplumber
